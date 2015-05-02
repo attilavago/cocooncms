@@ -11,3 +11,12 @@ A simple databaseless CMS built on JavaScript and Google Drive [currently under 
 * because you can host the site on any web-reachable platform, ex: Dropbox, so nobody needs to pay for hosting
 * because having a back-up of all your data is as simple as copy-pasting or downloading your spreadsheet
 * because it comes with Google's security, so unless you delete your own data or give access to someone else to do it, it's safe
+
+## When?
+
+###Stay tuned! The following versions are to be launched very soon:
+
+* v.1 jquery + tabletop.js
+* v.1 angular.js + tabletop.js
+* v.1 ember.js + tabletop.js
+* v.1 vanilla JavaScript + tabletop.js
