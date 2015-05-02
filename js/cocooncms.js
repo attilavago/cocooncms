@@ -48,7 +48,7 @@ url: https://github.com/attilavago/cocooncms
       // simulates AJAX request
       var articleData = data,
           template = document.querySelector('#template').innerHTML,
-          result = document.querySelector('.cms-result'),
+          result = document.querySelector('.cms-article'),
           i = 0, len = articleData.length, 
           fragment = '';
        
