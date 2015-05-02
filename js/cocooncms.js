@@ -20,25 +20,51 @@ url: https://github.com/attilavago/cocooncms
   }
 
   function showInfo(data, tabletop) {
-    //alert("Successfully processed!")
-    console.log(data);
-    //console.log(data[0].title);
-    //$('.cms-article-title').append(data[0].title);
-    //$('.cms-article-content').append(data[0].content);
-    //$('.cms-article-author').append(data[0].author);
-    //$('.cms-article-date').append(data[0].date);
+    
+    console.log(data); // for testing only
 
-    	for (i = 0; i < data.length; i++) { 
+    /* old loop - non-templatised
+
+    	for (i = 0; i < data.length; i++) { // article template repeater
     		//console.log(data[i].title);
     		var title = data[i].title;
+        var image = data[i].image;
     		var content = data[i].content;
     		var author = data[i].author;
     		var date = data[i].date;
-    		$('.cms-result').append('<h2 class="cms-article-title">'+title+'</h2>');
-    		$('.cms-result').append('<p class="cms-article-content">'+content+'</p>');
-    		$('.cms-result').append('<p>by: <span class="cms-article-author">'+author+'</span></p>');
-    		$('.cms-result').append('<p>on: <span class="cms-article-date">'+date+'</span></p>');
-    		$('.cms-result').append('<hr>');
-		}
+    		$('.cms-article').append('<h2 class="cms-article-title">'+title+'</h2>');
+        $('.cms-article').append('<img class="cms-article-image" src="'+image+'">');
+    		$('.cms-article').append('<p class="cms-article-content">'+content+'</p>');
+    		$('.cms-article').append('<p>by: <span class="cms-article-author">'+author+'</span></p>');
+    		$('.cms-article').append('<p>on: <span class="cms-article-date">'+date+'</span></p>');
+    		$('.cms-article').append('<hr>');
+
+	    }
+
+      */
+
+
+    ;(function() {
+      // simulates AJAX request
+      var articleData = data,
+          template = document.querySelector('#template').innerHTML,
+          result = document.querySelector('.cms-result'),
+          i = 0, len = articleData.length, 
+          fragment = '';
+       
+      for ( ; i < len; i++ ) {
+        fragment += template
+          .replace( /\{\{title\}\}/, articleData[i].title )
+          .replace( /\{\{image\}\}/, articleData[i].image )
+          .replace( /\{\{content\}\}/, articleData[i].content )
+          .replace( /\{\{author\}\}/, articleData[i].author )
+          .replace( /\{\{date\}\}/, articleData[i].date );  
+      }
+     
+      result.innerHTML = fragment;
+    })();
+
+
 
   }
+

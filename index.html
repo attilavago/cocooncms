@@ -10,11 +10,33 @@
 
 <body>
 
+
 <h1>CocoonCMS pre-alpha Demo</h1>
 
-<div class="cms-result">
+
+
+   
+  <script type="template" id="template">
+    <h2>{{title}}</h2>
+    <img src="{{image}}">
+    <p>{{content}}</p>
+    <p>by: {{author}}</p>
+	<p>on: {{date}}</p>
+	<hr>
+  </script>
+
+
+<article class="cms-result">
 	
-</div>
+</article>
+
+<article class="cms-article">
+	<!-- article loaded here -->	
+</article>
+
+
+
+
 
 </body>
 
@@ -23,5 +45,7 @@
 window.onload = function() { init() }; // load everything from cocooncms.js 
 
 </script>
+
+
 
 </html>
