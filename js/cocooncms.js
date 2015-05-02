@@ -23,27 +23,6 @@ url: https://github.com/attilavago/cocooncms
     
     console.log(data); // for testing only
 
-    /* old loop - non-templatised
-
-    	for (i = 0; i < data.length; i++) { // article template repeater
-    		//console.log(data[i].title);
-    		var title = data[i].title;
-        var image = data[i].image;
-    		var content = data[i].content;
-    		var author = data[i].author;
-    		var date = data[i].date;
-    		$('.cms-article').append('<h2 class="cms-article-title">'+title+'</h2>');
-        $('.cms-article').append('<img class="cms-article-image" src="'+image+'">');
-    		$('.cms-article').append('<p class="cms-article-content">'+content+'</p>');
-    		$('.cms-article').append('<p>by: <span class="cms-article-author">'+author+'</span></p>');
-    		$('.cms-article').append('<p>on: <span class="cms-article-date">'+date+'</span></p>');
-    		$('.cms-article').append('<hr>');
-
-	    }
-
-      */
-
-
     ;(function() {
       // simulates AJAX request
       var articleData = data,
