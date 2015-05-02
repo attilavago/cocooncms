@@ -1,5 +1,5 @@
 # Cocoon-CMS
-A simple databaseless CMS built on JavaScript and Google Drive
+A simple databaseless CMS built on JavaScript and Google Drive [currently under development]
 
 ## Why?
 
