@@ -14,7 +14,7 @@ A simple databaseless CMS built on JavaScript and Google Drive [currently under 
 
 ## When?
 
-###Stay tuned! The following versions are to be launched very soon:
+####Stay tuned! The following versions are to be launched very soon:
 
 * v.1 jquery + tabletop.js
 * v.1 angular.js + tabletop.js
