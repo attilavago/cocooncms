@@ -5,6 +5,7 @@
 	<title>CocoonCMS</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/tabletop.js"></script>
+	<script src="js/cocooncms.js"></script>
 </head>
 
 <body>
@@ -18,42 +19,8 @@
 </body>
 
 <script type="text/javascript">
-	
-// https://docs.google.com/spreadsheets/d/1WirgJFgoLQJxNB7_2Gn2ull13B3cYyRVU5vPbzt5o78/pubhtml
 
-window.onload = function() { init() };
-
-  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1WirgJFgoLQJxNB7_2Gn2ull13B3cYyRVU5vPbzt5o78/pubhtml';
-
-  function init() {
-    Tabletop.init( { key: public_spreadsheet_url,
-                     callback: showInfo,
-                     simpleSheet: true } )
-  }
-
-  function showInfo(data, tabletop) {
-    //alert("Successfully processed!")
-    console.log(data);
-    //console.log(data[0].title);
-    //$('.cms-article-title').append(data[0].title);
-    //$('.cms-article-content').append(data[0].content);
-    //$('.cms-article-author').append(data[0].author);
-    //$('.cms-article-date').append(data[0].date);
-
-    	for (i = 0; i < data.length; i++) { 
-    		//console.log(data[i].title);
-    		var title = data[i].title;
-    		var content = data[i].content;
-    		var author = data[i].author;
-    		var date = data[i].date;
-    		$('.cms-result').append('<h2 class="cms-article-title">'+title+'</h2>');
-    		$('.cms-result').append('<p class="cms-article-content">'+content+'</p>');
-    		$('.cms-result').append('<p>by: <span class="cms-article-author">'+author+'</span></p>');
-    		$('.cms-result').append('<p>on: <span class="cms-article-date">'+date+'</span></p>');
-    		$('.cms-result').append('<hr>');
-		}
-
-  }
+window.onload = function() { init() }; // load everything from cocooncms.js 
 
 </script>
 
