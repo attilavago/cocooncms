@@ -2,9 +2,13 @@
 <html>
 
 <head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>CocoonCMS | Home</title>
 	<!-- Compiled and minified materialize CSS -->
+  	
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+  	<link rel="stylesheet" href="assets/app.css">
 
   	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -17,6 +21,7 @@
 
 <body>
 
+<div class="navbar-fixed">
 <nav>
     <div class="nav-wrapper purple lighten-1">
       <a href="#!" class="brand-logo">CocoonCMS</a>
@@ -33,16 +38,18 @@
       </ul>
     </div>
 </nav>
+</div>
 
-<div class="container"> <!-- Page Content goes here -->  
-
-    <div class="row cms-front">
+    <div class="cms-front">
       	<!-- articles loaded here -->
     </div>	
 
-</div>
 
 
+
+<div>test section 1</div>
+<div>test section 2</div>
+<div>test section 3</div>
 
 
 
@@ -54,11 +61,33 @@
 
 <!-- front page template -->
 <script type="template" id="front-page-template"> 
-   	<div class="grid-example col s12 m6 ">
-	    <h2>{{front-page-title}}</h2>
-	</div>
-</script>
+   	<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="{{front-page-slider-img-1}}">
+        <div class="caption center-align">
+          <h3>{{front-page-caption-1}}</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="{{front-page-slider-img-2}}"> 
+        <div class="caption left-align">
+          <h3>{{front-page-caption-2}}</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="{{front-page-slider-img-3}}">
+        <div class="caption right-align">
+          <h3>{{front-page-caption-3}}</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
 
+</script>
 
 
 

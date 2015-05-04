@@ -76,7 +76,13 @@ url: https://github.com/attilavago/cocooncms
        
       for ( ; i < len; i++ ) {
         frontFragment += frontTemplate
-          .replace( /\{\{front-page-title\}\}/, frontData[i].page_title );  
+          .replace( /\{\{front-page-title\}\}/, frontData[i].page_title )
+          .replace( /\{\{front-page-slider-img-1\}\}/, frontData[i].slider_img_1 )
+          .replace( /\{\{front-page-slider-img-2\}\}/, frontData[i].slider_img_2 )
+          .replace( /\{\{front-page-slider-img-3\}\}/, frontData[i].slider_img_3 )
+          .replace( /\{\{front-page-caption-1\}\}/, frontData[i].caption_1 )
+          .replace( /\{\{front-page-caption-2\}\}/, frontData[i].caption_2 )
+          .replace( /\{\{front-page-caption-3\}\}/, frontData[i].caption_3 );  
       }
      
       frontResult.innerHTML = frontFragment;
