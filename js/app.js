@@ -14,7 +14,7 @@ $( document ).ready(function() {
 			$('.slider').height(slider);
 		}).resize();
 
-	}, 2000);
+	}, 1000);
 
 });
 
